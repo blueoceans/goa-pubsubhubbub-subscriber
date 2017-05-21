@@ -1,0 +1,55 @@
+application: goapp-scaffold
+version: goa
+runtime: go
+api_version: go1
+threadsafe: true
+
+instance_class: F1
+automatic_scaling:
+  max_idle_instances: 1
+
+default_expiration: 10m
+
+handlers:
+# Static assets
+# swagger
+- url: /swagger.json
+  static_files: ../swagger/swagger.json
+  upload: /swagger.json
+  http_headers:
+    Access-Control-Allow-Origin: '*'
+- url: /swagger-ui(.*)/
+  static_files: ../swagger-ui/dist\1/index.html
+  upload: /swagger-ui(.*)/index.html
+- url: /swagger-ui(.*)
+  static_files: ../swagger-ui/dist\1
+  upload: /swagger-ui(.*)
+- url: /swagger-ui/
+  static_dir: ../swagger-ui/dist
+
+- url: /_ah/.*
+  script: _go_app
+  login: admin
+- url: /.*
+  script: _go_app
+
+nobuild_files:
+- vendor
+
+skip_files:
+- |
+  ^(.*/)?(
+  (#.*#)|
+  (.*\.mapping)|
+  (.*\.po)|
+  (.*\.pot)|
+  (.*\.py[co])|
+  (.*\.sw?)|
+  (.*\.yaml)|
+  (.*_test\.go)|
+  (.*~)|
+  (LICENSE)|
+  (Makefile.*)|
+  (\..*)|
+  (vendor/.*)|
+  )$
