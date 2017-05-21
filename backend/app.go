@@ -5,7 +5,7 @@ import (
 
 	"github.com/goadesign/goa"
 
-	"github.com/MiCHiLU/goapp-scaffold/app"
+	"github.com/blueoceans/goa-pubsubhubbub-subscriber/app"
 )
 
 type itemController struct {

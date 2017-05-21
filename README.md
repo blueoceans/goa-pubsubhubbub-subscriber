@@ -1,15 +1,15 @@
 # goa-pubsubhubbub-subscriber
 A PubSubHubbub subscriber for goa
 
-[![wercker status](https://app.wercker.com/status/01a88b7c9b69392341715dc7b9a234ba/m/master "wercker status")](https://app.wercker.com/project/byKey/01a88b7c9b69392341715dc7b9a234ba)
+[![wercker status](https://app.wercker.com/status/ab487a8c5ac51d87e7c83525356fb63c/m/master "wercker status")](https://app.wercker.com/project/byKey/ab487a8c5ac51d87e7c83525356fb63c)
 
 # clone repository
 
     $ cd `goapp env GOPATH`
-    $ mkdir -p src/github.com/MiCHiLU
-    $ cd src/github.com/MiCHiLU
-    $ git clone --depth 1 https://github.com/MiCHiLU/goapp-scaffold.git
-    $ cd goapp-scaffold
+    $ mkdir -p src/github.com/blueoceans
+    $ cd src/github.com/blueoceans
+    $ git clone --depth 1 https://github.com/blueoceans/goa-pubsubhubbub-subscriber.git
+    $ cd goa-pubsubhubbub-subscriber
 
 # dep
 
@@ -29,8 +29,8 @@ Install goa:
 
 Generate code:
 
-    $ goagen app -d github.com/MiCHiLU/goapp-scaffold/design
-    $ goagen swagger -d github.com/MiCHiLU/goapp-scaffold/design
+    $ goagen app -d github.com/blueoceans/goa-pubsubhubbub-subscriber/design
+    $ goagen swagger -d github.com/blueoceans/goa-pubsubhubbub-subscriber/design
 
 # with swagger
 

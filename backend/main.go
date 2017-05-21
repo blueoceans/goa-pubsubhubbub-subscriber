@@ -6,7 +6,7 @@ import (
 	"github.com/goadesign/goa"
 	"github.com/goadesign/goa/middleware"
 
-	"github.com/MiCHiLU/goapp-scaffold/app"
+	"github.com/blueoceans/goa-pubsubhubbub-subscriber/app"
 )
 
 func init() {
