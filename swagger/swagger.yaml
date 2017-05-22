@@ -1,0 +1,63 @@
+consumes:
+- application/atom+xml
+- application/rss+xml
+externalDocs:
+  url: https://pubsubhubbub.github.io/PubSubHubbub/pubsubhubbub-core-0.4.html
+info:
+  title: goa-pubsubhubbub-subscriber
+  version: ""
+paths:
+  /subscriber:
+    get:
+      operationId: hub#verifiy
+      parameters:
+      - in: query
+        name: hub.challenge
+        required: false
+        type: string
+      - in: query
+        minimum: 0
+        name: hub.lease_seconds
+        required: false
+        type: number
+      - enum:
+        - denied
+        - subscribe
+        - unsubscribe
+        in: query
+        name: hub.mode
+        required: true
+        type: string
+      - in: query
+        name: hub.reason
+        required: false
+        type: string
+      - format: uri
+        in: query
+        name: hub.topic
+        required: true
+        type: string
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+      summary: verifiy hub
+      tags:
+      - hub
+    post:
+      operationId: hub#notify
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+      summary: notify hub
+      tags:
+      - hub
+produces:
+- application/json
+responses:
+  OK:
+    description: OK
+swagger: "2.0"
