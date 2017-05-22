@@ -1,5 +1,5 @@
 application: goapp-scaffold
-version: goa
+version: goa-pubsubhubbub-subscriber
 runtime: go
 api_version: go1
 threadsafe: true
