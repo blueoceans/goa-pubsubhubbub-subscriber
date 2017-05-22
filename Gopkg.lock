@@ -1,10 +1,16 @@
-memo = "a723985c3bd7db3bef295e8e973fd283de04f2b5231efacc3c1d74799f8cc6bf"
+memo = "f44ee34484564f636bed0f911fd4f4f21ea52a9004ec2a146375476a498609f0"
 
 [[projects]]
   branch = "master"
   name = "github.com/armon/go-metrics"
   packages = ["."]
   revision = "93f237eba9b0602f3e73710416558854a81d9337"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/blueoceans/go-common"
+  packages = ["logutil"]
+  revision = "94525f01f3b1af4ee389a158d169b100cab93915"
 
 [[projects]]
   branch = "master"
