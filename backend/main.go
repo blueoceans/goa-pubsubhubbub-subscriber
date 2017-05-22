@@ -16,7 +16,7 @@ func init() {
 	service.Use(middleware.ErrorHandler(service, true))
 	service.Use(middleware.Recover())
 
-	app.MountItemsController(service, newItemsController(service))
+	app.MountHubController(service, newHubController(service))
 
 	http.HandleFunc("/", service.Mux.ServeHTTP)
 	//http.HandleFunc("/", handleFunc)
